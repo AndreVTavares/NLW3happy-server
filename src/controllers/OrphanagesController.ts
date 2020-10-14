@@ -43,6 +43,8 @@ export default {
 
     const requestImages = request.files as Express.Multer.File[];
 
+    // requestImages.map((image) => fs.unlinkSync(image.path)); // yarn add fs-copy-file
+
     const images = requestImages.map((image) => {
       return { path: image.filename };
     });
@@ -54,7 +56,7 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends === 'true',
       images,
     };
 
