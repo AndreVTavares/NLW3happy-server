@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import fs from 'fs'
+import fs from 'fs';
 import * as Yup from 'yup';
 
 import orphanageView from '../views/orphanages_view';
@@ -43,8 +43,6 @@ export default {
     const orphanagesRepository = getRepository(Orphanage);
 
     const requestImages = request.files as Express.Multer.File[];
-
-    requestImages.map((image) => fs.unlinkSync(image.path)); // yarn add fs-copy-file
 
     const images = requestImages.map((image) => {
       return { path: image.filename };
