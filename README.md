@@ -1,6 +1,6 @@
 # NLW3happy-server
 <h1 align="center">
-<img alt="happy" src="https://raw.githubusercontent.com/raphabarreto/happy/main/.github/happy.png" width="450px">
+<img alt="happy" src="https://github.com/AndreVTavares/NLW3-happy/blob/main/happy.png?raw=true" width="450px">
 </h1>
 
 
